@@ -1,20 +1,56 @@
-# Svelte library
+# Svelte Payment Inputs
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+<!-- automd:badges license name="svelte-payment-inputs" color="green" github="mostlywhat/svelte-payment-inputs" -->
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+[![npm version](https://flat.badgen.net/npm/v/svelte-payment-inputs?color=green)](https://npmjs.com/package/svelte-payment-inputs)
+[![npm downloads](https://flat.badgen.net/npm/dm/svelte-payment-inputs?color=green)](https://npmjs.com/package/svelte-payment-inputs)
+[![license](https://flat.badgen.net/github/license/mostlywhat/svelte-payment-inputs?color=green)](https://github.com/mostlywhat/svelte-payment-inputs/blob/main/LICENSE)
 
-## Creating a project
+<!-- /automd -->
 
-If you're seeing this, you've probably already done this step. Congrats!
+Svelte Payment Inputs is a collection of unstyled payment input components for Svelte. It uses [Bits UI](https://www.bits-ui.com) under the hood, which was created by [Huntabyte](https://github.com/huntabyte).
+
+This is a port of [React Payment Inputs](https://github.com/medipass/react-payment-inputs) for React, which was created by [Medipass](https://github.com/medipass).
+
+## Usage
+
+To start using the library, install it in your project:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install svelte-payment-inputs
 ```
+
+Use the drawer in your app.
+
+```svelte
+<script>
+	import { Package } from "svelte-payment-inputs";
+</script>
+
+<Package
+  name="Visa"
+  number="4111 1111 1111 1111"
+  expiry="12/23"
+  cvc="123"
+  on:change={(event) => {
+    console.log(event.detail);
+  }}
+</Package>
+```
+
+## Documentation
+
+The documentation is hosted on [GitHub Pages](https://mostlywhat.github.io/svelte-payment-inputs/).
+
+## Examples
+
+Play around with the examples on StackBlitz:
+
+- [With scaled background](https://stackblitz.com/edit/vaul-svelte-scaled?file=src%2Froutes%2F%2Bpage.svelte)
+
+## API Reference
+
+TBD
 
 ## Developing
 
@@ -27,17 +63,17 @@ npm run dev
 npm run dev -- --open
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+Everything inside `src/lib` is part of the library, everything inside `src/routes` is the documentation.
 
 ## Building
 
-To build your library:
+To build the library:
 
 ```bash
 npm run package
 ```
 
-To create a production version of your showcase app:
+To create a production version of the documentation:
 
 ```bash
 npm run build
@@ -45,13 +81,11 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+> To deploy the app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
 ## Publishing
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
+To publish the library to [npm](https://www.npmjs.com):
 
 ```bash
 npm publish
