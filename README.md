@@ -8,7 +8,7 @@
 
 <!-- /automd -->
 
-Svelte Payment Inputs is a collection of unstyled payment input components for Svelte. It uses [Bits UI](https://www.bits-ui.com) under the hood, which was created by [Huntabyte](https://github.com/huntabyte).
+Svelte Payment Inputs is a collection of unstyled payment input components for Svelte.
 
 This is a port of [React Payment Inputs](https://github.com/medipass/react-payment-inputs) for React, which was created by [Medipass](https://github.com/medipass).
 
@@ -90,3 +90,27 @@ To publish the library to [npm](https://www.npmjs.com):
 ```bash
 npm publish
 ```
+
+## Testing
+
+To run the tests, use the following command:
+
+```bash
+npm run test
+```
+
+## Roadmap
+
+The roadmap for the project is available in the [ROADMAP.md](ROADMAP.md) file.
+
+## Acknowledgements
+
+TBD
+
+## License
+
+The svelte-payment-inputs is licensed under the [MIT License](LICENSE).
+
+## Contributing
+
+Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) for more information.
